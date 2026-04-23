@@ -84,7 +84,8 @@ module datapath_tb;
             clk = ~clk; #50; 
         end 
     end
-
+    integer failedTests = 0;
+    integer totalTests = 0;
     task test_case(
         input [31:0] instruction_val,
         input [31:0] A_val,
@@ -130,8 +131,7 @@ module datapath_tb;
     endtask
 
 
-    integer failedTests = 0;
-    integer totalTests = 0;
+    
     initial begin
         // Reset
         @(posedge clk); // Wait for first clock out of reset 
@@ -146,6 +146,36 @@ module datapath_tb;
         // -------------------------------------------------------
         $write("\tTest Case 1: R-type (add) ...");
         test_case(32'h00000024, 32'hFFFFFFFF, 32'h0001, 1'b0, 32'h0001, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        $write("\tTest Case 2: R-type (or)  ...");
+        test_case(32'h00000025, 32'hFFFFFFFF, 32'h0001, 1'b0, 32'hFFFFFFFF, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        $write("\tTest Case 3: R-type (add) ...");
+        test_case(32'h00000020, 32'hFFFFFFFF, 32'h0001, 1'b1, 32'h0000, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        $write("\tTest Case 4: R-type (sub) ...");
+        test_case(32'h00000022, 32'hFFFFFFFF, 32'h0001, 1'b0, 32'hFFFFFFFE, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        $write("\tTest Case 5: R-type (slt) ...");
+        test_case(32'h0000002A, 32'hFFFFFFFF, 32'h0001, 1'b0, 32'h0001, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        $write("\tTest Case 6: R-type (nor) ...");
+        test_case(32'h00000027, 32'hFFFFFFFF, 32'h0001, 1'b1, 32'h0000, 1'b1, 1'b0, 1'b0, 1'b0, 2'b10, 1'b0, 1'b0, 1'b1);
+
+        // -------------------------------------------------------
+        // Test group 3: Control Unit (I-Type instructions)
+        // -------------------------------------------------------
+        $write("\tTest Case 7: I-type (addi) ...");
+        test_case(32'h20000004, 32'hfffffffb, 32'h0004, 1'b0, 32'hffffffff, 1'b0, 1'b0, 1'b0, 1'b0, 2'b00, 1'b0, 1'b1, 1'b1);
+
+        $write("\tTest Case 8: I-type (lw)   ...");
+        test_case(32'h8C000020, 32'h000000FF, 32'h0020, 1'b0, 32'h011F, 1'b0, 1'b0, 1'b1, 1'b1, 2'b00, 1'b0, 1'b1, 1'b1);
+
+        $write("\tTest Case 9: I-type (sw)   ...");
+        test_case(32'hAC000064, 32'h000000FF, 32'h0064, 1'b0, 32'h0163, 1'b0, 1'b0, 1'b0, 1'b0, 2'b00, 1'b1, 1'b1, 1'b0);
+
+        $write("\tTest Case 10: I-type (beq)  ...");
+        test_case(32'h10000025, 32'h000000FF, 32'h0025, 1'b0, 32'h00DA, 1'b0, 1'b1, 1'b0, 1'b0, 2'b01, 1'b0, 1'b0, 1'b0);
 
         // -------------------------------------------------------
         // More ALU Control Unit tests jere

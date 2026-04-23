@@ -1,7 +1,7 @@
 //=========================================================================
 // Name & Email must be EXACTLY as in Gradescope roster!
-// Name: 
-// Email: 
+// Name: Thomas Miko
+// Email: tmiko001@ucr.edu
 // 
 // Assignment name: 
 // Lab section: 
@@ -38,8 +38,20 @@ module control  (
 // ------------------------------
 // Insert your solution below
 // ------------------------------ 
+
+//vscode autocomplete used the turnary operator - i would not have done it myself
 always @(instr_op)
 begin 
    // Put your solution here
+    reg_dst = (instr_op == `OPCODE_R_TYPE) ? 1 : 0;
+    alu_src = (instr_op == `OPCODE_LOAD_WORD || instr_op == `OPCODE_ADDI || instr_op == `OPCODE_STORE_WORD) ? 1 : 0;
+    mem_to_reg = (instr_op == `OPCODE_LOAD_WORD) ? 1 : 0;
+    reg_write = (instr_op == `OPCODE_R_TYPE || instr_op == `OPCODE_LOAD_WORD || instr_op == `OPCODE_ADDI) ? 1 : 0;
+    mem_read = (instr_op == `OPCODE_LOAD_WORD) ? 1 : 0;
+    mem_write = (instr_op == `OPCODE_STORE_WORD) ? 1 : 0;
+    branch = (instr_op == `OPCODE_BRANCH_EQ) ? 1 : 0;
+    alu_op[1] = (instr_op == `OPCODE_R_TYPE) ? 1 : 0;
+    alu_op[0] = (instr_op == `OPCODE_BRANCH_EQ) ? 1 : 0;
+
 end 
 endmodule
