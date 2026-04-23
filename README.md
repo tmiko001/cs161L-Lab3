@@ -81,7 +81,7 @@ control lines will need to be set.
             <td style="width: 14.2764%; height: 31px; text-align: center;">0</td>
             <td style="width: 14.2749%; height: 31px; text-align: center;">X</td>
             <td style="width: 14.2764%; height: 31px; text-align: center;">X</td>
-            <td style="width: 14.2749%; height: 31px; text-align: center;">?</td>
+            <td style="width: 14.2749%; height: 31px; text-align: center;">0</td>
         </tr>
         <tr style="height: 31px;">
             <td style="width: 14.2764%; height: 31px; text-align: right;">ALUSrc</td>
@@ -89,7 +89,7 @@ control lines will need to be set.
             <td style="width: 14.2764%; height: 31px; text-align: center;">1</td>
             <td style="width: 14.2749%; height: 31px; text-align: center;">1</td>
             <td style="width: 14.2764%; height: 31px; text-align: center;">0</td>
-            <td style="width: 14.2749%; height: 31px; text-align: center;">?</td>
+            <td style="width: 14.2749%; height: 31px; text-align: center;">1</td>
         </tr>
         <tr style="height: 31px;">
             <td style="width: 14.2764%; height: 31px; text-align: right;">MemtoReg</td>
@@ -97,7 +97,7 @@ control lines will need to be set.
             <td style="width: 14.2764%; height: 31px; text-align: center;">1</td>
             <td style="width: 14.2749%; height: 31px; text-align: center;">X</td>
             <td style="width: 14.2764%; height: 31px; text-align: center;">X</td>
-            <td style="width: 14.2749%; height: 31px; text-align: center;">?</td>
+            <td style="width: 14.2749%; height: 31px; text-align: center;">0</td>
         </tr>
         <tr style="height: 31px;">
             <td style="width: 14.2764%; height: 31px; text-align: right;">RegWrite</td>
@@ -105,7 +105,7 @@ control lines will need to be set.
             <td style="width: 14.2764%; height: 31px; text-align: center;">1</td>
             <td style="width: 14.2749%; height: 31px; text-align: center;">0</td>
             <td style="width: 14.2764%; height: 31px; text-align: center;">0</td>
-            <td style="width: 14.2749%; height: 31px; text-align: center;">?</td>
+            <td style="width: 14.2749%; height: 31px; text-align: center;">1</td>
         </tr>
         <tr style="height: 31px;">
             <td style="width: 14.2764%; height: 31px; text-align: right;">MemRead</td>
@@ -113,7 +113,7 @@ control lines will need to be set.
             <td style="width: 14.2764%; height: 31px; text-align: center;">1</td>
             <td style="width: 14.2749%; height: 31px; text-align: center;">0</td>
             <td style="width: 14.2764%; height: 31px; text-align: center;">0</td>
-            <td style="width: 14.2749%; height: 31px; text-align: center;">?</td>
+            <td style="width: 14.2749%; height: 31px; text-align: center;">0</td>
         </tr>
         <tr style="height: 31px;">
             <td style="width: 14.2764%; height: 31px; text-align: right;">MemWrite</td>
@@ -121,7 +121,7 @@ control lines will need to be set.
             <td style="width: 14.2764%; height: 31px; text-align: center;">0</td>
             <td style="width: 14.2749%; height: 31px; text-align: center;">1</td>
             <td style="width: 14.2764%; height: 31px; text-align: center;">0</td>
-            <td style="width: 14.2749%; height: 31px; text-align: center;">?</td>
+            <td style="width: 14.2749%; height: 31px; text-align: center;">0</td>
         </tr>
         <tr style="height: 31px;">
             <td style="width: 14.2764%; height: 31px; text-align: right;">Branch</td>
@@ -129,7 +129,7 @@ control lines will need to be set.
             <td style="width: 14.2764%; height: 31px; text-align: center;">0</td>
             <td style="width: 14.2749%; height: 31px; text-align: center;">0</td>
             <td style="width: 14.2764%; height: 31px; text-align: center;">1</td>
-            <td style="width: 14.2749%; height: 31px; text-align: center;">?</td>
+            <td style="width: 14.2749%; height: 31px; text-align: center;">0</td>
         </tr>
         <tr style="height: 31px;">
             <td style="width: 14.2764%; height: 31px; text-align: right;">ALUOp1</td>
@@ -137,7 +137,7 @@ control lines will need to be set.
             <td style="width: 14.2764%; height: 31px; text-align: center;">0</td>
             <td style="width: 14.2749%; height: 31px; text-align: center;">0</td>
             <td style="width: 14.2764%; height: 31px; text-align: center;">0</td>
-            <td style="width: 14.2749%; height: 31px; text-align: center;">?</td>
+            <td style="width: 14.2749%; height: 31px; text-align: center;">0</td>
         </tr>
         <tr style="height: 31px;">
             <td style="width: 14.2764%; height: 31px; text-align: right;">AluOp0</td>
@@ -145,7 +145,7 @@ control lines will need to be set.
             <td style="width: 14.2764%; height: 31px; text-align: center;">0</td>
             <td style="width: 14.2749%; height: 31px; text-align: center;">0</td>
             <td style="width: 14.2764%; height: 31px; text-align: center;">1</td>
-            <td style="width: 14.2749%; height: 31px; text-align: center;">?</td>
+            <td style="width: 14.2749%; height: 31px; text-align: center;">0</td>
         </tr>
     </tbody>
 </table>
